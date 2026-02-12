@@ -1,0 +1,33 @@
+data_root: ./data
+train_split: train.csv
+val_split: val.csv
+test_split: test.csv
+output_dir: ./outputs
+batch_size: 4
+num_workers: 2
+epochs: 30
+lr: 0.0003
+weight_decay: 0.05
+min_lr: 1.0e-6
+grad_clip: 1.0
+amp: true
+seed: 42
+resume: ""
+model:
+  num_classes: 60
+  img_size: 224
+  video_frames: 64
+  video_patch_size: 16
+  tubelet_size: 2
+  video_embed_dim: 384
+  video_depth: 12
+  video_heads: 6
+  skeleton_embed_dim: 96
+  skeleton_depths: [2, 2]
+  skeleton_heads: [3, 6]
+  skeleton_patch_size: 2
+  keep_ratio: 0.6
+  hcmga_heads: 6
+  hcmga_layers: [4, 8, 11]
+  dropout: 0.1
+  late_fusion: false
